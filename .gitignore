@@ -1,0 +1,57 @@
+﻿# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and temporary files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+*.jupyterlab-workspace
+
+# Project datasets - retain locally
+Airport_Baggage_Baseline_Datasets/data/
+
+# Sensitive credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+application-local.properties
+
+# Java / Maven build files
+**/target/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# React / Node.js
+node_modules/
+dist/
+coverage/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Power BI binary reports
+*.pbix
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,15 @@
+{
+  "baggage_records": 1000,
+  "flight_records": 250,
+  "assignment_records": 1500,
+  "scan_event_records": 9000,
+  "assignment_bag_fk_violations": 0,
+  "assignment_flight_fk_violations": 0,
+  "scan_bag_fk_violations": 0,
+  "duplicate_event_ids": 0,
+  "journey_types": {
+    "direct_bags": 500,
+    "connecting_bags": 500
+  },
+  "data_label": "Simulated clean baseline data"
+}

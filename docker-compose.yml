@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: ./baggage-investigation-api
+      dockerfile: Dockerfile
+    image: baggage-investigation-api:v1
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      DB_URL: jdbc:postgresql://host.docker.internal:5433/airport_baggage_db
+      DB_USERNAME: postgres
+      DB_PASSWORD: ${DB_PASSWORD:?Database password is required}
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:8081
+    image: baggage-frontend:v1
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
